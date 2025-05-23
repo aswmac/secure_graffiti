@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Editor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #textWindow {
+      width: 100%;
+      height: 300px;
+      border: 2px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+      background-color: white;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .editing {
+      background-color: lightgreen !important;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shared Text Editor</h1>
+  <div id="textWindow" contenteditable="false"></div>
+  <input type="text" id="textInput" placeholder="Type your text here..." />
+  <button onclick="addText()">Add Text</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    const textWindow = document.getElementById('textWindow');
+    const textInput = document.getElementById('textInput');
+
+    // Initialize UI
+    socket.on('init', (data) => {
+      textWindow.textContent = data.text;
+      if (data.isEditing) {
+        textWindow.classList.add('editing');
+      }
+    });
+
+    // Update content on new text
+    socket.on('update_text', (newText) => {
+      textWindow.textContent = newText;
+    });
+
+    // Highlight when someone is editing
+    socket.on('start_editing', () => {
+      textWindow.classList.add('editing');
+    });
+
+    // Remove highlight after edit
+    socket.on('end_editing', () => {
+      textWindow.classList.remove('editing');
+    });
+
+    // Show error message if another user is editing
+    socket.on('error', (message) => {
+      alert(message);
+    });
+
+    function addText() {
+      const text = textInput.value.trim();
+      if (!text) return;
+      socket.emit('add_text', text);
+      textInput.value = '';
+    }
+  </script>
+</body>
+</html>
