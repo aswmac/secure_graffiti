@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Statistics Formula Sheet</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    math {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>College Statistics Formula Sheet</h1>
+
+  <section>
+    <h2>Descriptive Statistics</h2>
+    <p><strong>Mean:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>&#x03BC;</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mo>&#x2211;</mo><mi>x</mi></mrow>
+        <mi>n</mi>
+      </mfrac>
+    </math>
+
+    <p><strong>Sample Mean:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>&#x0304;x</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mo>&#x2211;</mo><mi>x</mi></mrow>
+        <mi>n</mi>
+      </mfrac>
+    </math>
+
+    <p><strong>Variance (Population):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msup><mi>&#x03C3;</mi><mn>2</mn></msup>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mo>&#x2211;</mo>
+          <msup><mrow><mo>(</mo><mi>x</mi><mo>-</mo><mi>&#x03BC;</mi><mo>)</mo></mrow><mn>2</mn></msup>
+        </mrow>
+        <mi>n</mi>
+      </mfrac>
+    </math>
+
+    <p><strong>Sample Variance:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <msup><mi>s</mi><mn>2</mn></msup>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mo>&#x2211;</mo>
+          <msup><mrow><mo>(</mo><mi>x</mi><mo>-</mo><mi>&#x0304;x</mi><mo>)</mo></mrow><mn>2</mn></msup>
+        </mrow>
+        <mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow>
+      </mfrac>
+    </math>
+  </section>
+
+  <section>
+    <h2>Probability</h2>
+    <p><strong>Addition Rule (Mutually Exclusive):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>P</mi><mo>(</mo><mi>A</mi><mo>&#x222A;</mo><mi>B</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>+</mo><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo>
+    </math>
+
+    <p><strong>Multiplication Rule (Independent Events):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>P</mi><mo>(</mo><mi>A</mi><mo>&#x2229;</mo><mi>B</mi><mo>)</mo><mo>=</mo><mi>P</mi><mo>(</mo><mi>A</mi><mo>)</mo><mi>P</mi><mo>(</mo><mi>B</mi><mo>)</mo>
+    </math>
+  </section>
+
+  <section>
+    <h2>Distributions</h2>
+    <p><strong>Binomial Probability:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>P</mi><mo>(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo>)</mo><mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mfrac>
+          <mrow><mi>n</mi><mo>!</mo></mrow>
+          <mrow><mi>k</mi><mo>!</mo><mo>(</mo><mi>n</mi><mo>-</mo><mi>k</mi><mo>)</mo><mo>!</mo></mrow>
+        </mfrac>
+        <mo>)</mo>
+      </mrow>
+      <msup><mi>p</mi><mi>k</mi></msup>
+      <msup><mrow><mo>(</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo>)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mi>k</mi></mrow></msup>
+    </math>
+
+    <p><strong>Normal Distribution (Standardized):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>z</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mi>x</mi><mo>-</mo><mi>&#x03BC;</mi></mrow>
+        <mi>&#x03C3;</mi>
+      </mfrac>
+    </math>
+  </section>
+
+  <section>
+    <h2>Sampling & Central Limit Theorem</h2>
+    <p><strong>Standard Error (Sample Mean):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>SE</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mi>&#x03C3;</mi>
+        <msqrt><mi>n</mi></msqrt>
+      </mfrac>
+    </math>
+  </section>
+
+  <section>
+    <h2>Confidence Intervals</h2>
+    <p><strong>CI for Mean (Known σ):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>&#x0304;x</mi>
+      <mo>&#x00B1;</mo>
+      <mi>z</mi>
+      <mo>&#x22C5;</mo>
+      <mfrac>
+        <mi>&#x03C3;</mi>
+        <msqrt><mi>n</mi></msqrt>
+      </mfrac>
+    </math>
+
+    <p><strong>CI for Proportion:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>p</mi>
+      <mo>&#x00B1;</mo>
+      <mi>z</mi>
+      <mo>&#x22C5;</mo>
+      <msqrt>
+        <mfrac>
+          <mrow><mi>p</mi><mo>(</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo>)</mo></mrow>
+          <mi>n</mi>
+        </mfrac>
+      </msqrt>
+    </math>
+  </section>
+
+  <section>
+    <h2>Hypothesis Testing</h2>
+    <p><strong>Test Statistic (Mean, Known σ):</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>z</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow><mi>&#x0304;x</mi><mo>-</mo><mi>&#x03BC;</mi><mo>_</mo><mn>0</mn></mrow>
+        <mfrac>
+          <mi>&#x03C3;</mi>
+          <msqrt><mi>n</mi></msqrt>
+        </mfrac>
+      </mfrac>
+    </math>
+  </section>
+
+  <section>
+    <h2>Regression & Correlation</h2>
+    <p><strong>Linear Regression Equation:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>y</mi>
+      <mo>=</mo>
+      <mi>a</mi>
+      <mo>+</mo>
+      <mi>b</mi><mi>x</mi>
+    </math>
+
+    <p><strong>Slope:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>b</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mo>&#x2211;</mo>
+          <mo>(</mo><mi>x</mi><mo>-</mo><mi>&#x0304;x</mi><mo>)</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>&#x0304;y</mi><mo>)</mo>
+        </mrow>
+        <mrow>
+          <mo>&#x2211;</mo>
+          <msup><mrow><mo>(</mo><mi>x</mi><mo>-</mo><mi>&#x0304;x</mi><mo>)</mo></mrow><mn>2</mn></msup>
+        </mrow>
+      </mfrac>
+    </math>
+
+    <p><strong>Correlation Coefficient:</strong></p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+      <mi>r</mi>
+      <mo>=</mo>
+      <mfrac>
+        <mrow>
+          <mi>cov</mi><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo>
+        </mrow>
+        <mrow>
+          <mi>s</mi><mi>_x</mi><mi>s</mi><mi>_y</mi>
+        </mrow>
+      </mfrac>
+    </math>
+  </section>
+
+</body>
+</html>
